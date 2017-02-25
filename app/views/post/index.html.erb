@@ -1,0 +1,22 @@
+<%=@post%>
+<%@posts.each do |a| %>
+<p>
+    <%=a.title%>
+</p>
+<%end%>
+
+<table class="table">
+    <tr>
+        <th>제목</th>
+        <th>저자</th>
+        <th>내용</th>
+    </tr>
+    <% @posts.each do |a| %>
+        <tr>
+            <td><a href="/post/<%=a.id%>"><%= a.title%></a></td>
+            <td><a href="/post/<%=a.id%>"><%=a.writer%></a></td>
+            <td><a href="/post/<%=a.id%>"><%=a.content%></a></td>
+        </tr>
+    <%end%>
+</table>
+<a href="/post/new">글쓰기</a>

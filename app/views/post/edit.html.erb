@@ -1,0 +1,9 @@
+<%= form_tag "/post/#{@doc.id}", method: :patch do %>
+    <label for="title">제목:</label>
+    <input id="title" type="text" name="title"/><br/>
+    <label for="writer">작가:</label>
+    <input id="writer" type="text" name="writer"/><br/>
+    <label for="content">내용:</label>
+    <input id="content" type="text" name="content"/><br/>
+    <input type="summint"/>
+<%end%>

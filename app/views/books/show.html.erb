@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @book.content %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <% if @book.avatar.url %>
+  <%= @book.avatar %>
+  <a href="<%= @book.avatar.url %>">다운로드하기</a>
+  <%end%>
+</p>
+<% if @book.image.url %>
+<img src=<%= @book.image.url%>/><br/>
+<%end%>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
